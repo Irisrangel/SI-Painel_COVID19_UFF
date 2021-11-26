@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  python-covid-uff:
+    build: .
+    container_name: python-covid-uff
+    volumes:
+      - ./src:/app/src
+    networks:
+      - uff
+    env_file:
+      - "variables.env"
+
+networks:
+  uff:

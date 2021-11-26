@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  mysql-uff-covid:
+    image: mysql:5.7
+    container_name: mysql-uff-covid
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./backup/mysql:/var/lib/mysql
+    env_file:
+      - variables.env
+    networks:
+      - uff
+
+networks:
+  uff:
