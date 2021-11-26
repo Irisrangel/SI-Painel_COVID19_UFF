@@ -1,0 +1,8 @@
+# Todo dia 23:20 -
+20 23 * * * cd /home/painel_covid && bash extract_covid.sh ; bash load_covid.sh
+
+# Todo dia 23:20
+30 23 * * * cd /home/painel_covid && bash extract_mobilidade.sh ; bash load_mobilidade.sh
+
+# Todo mês 01/mm/yyyy - Controle de quantidade de logs
+0 0 1 * * cd /home/painel_covid && bash manager_rotate_logs.sh
